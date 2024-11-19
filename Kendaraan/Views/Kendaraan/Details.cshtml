@@ -1,0 +1,72 @@
+﻿@model Kendaraan.Models.KendaraanModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>KendaraanModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.No)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.No)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NoRegistrasi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoRegistrasi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NamaPemilik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaPemilik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MerkKendaraan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MerkKendaraan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TahunPembuatan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TahunPembuatan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kapasitas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kapasitas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Warna)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Warna)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BahanBakar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BahanBakar)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NoRegistrasi">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,79 @@
+﻿@model Kendaraan.Models.KendaraanModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>KendaraanModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NoRegistrasi" />
+            <div class="form-group">
+                <label asp-for="No" class="control-label"></label>
+                <input asp-for="No" class="form-control" />
+                <span asp-validation-for="No" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamaPemilik" class="control-label"></label>
+                <input asp-for="NamaPemilik" class="form-control" />
+                <span asp-validation-for="NamaPemilik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Alamat" class="control-label"></label>
+                <input asp-for="Alamat" class="form-control" />
+                <span asp-validation-for="Alamat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MerkKendaraan" class="control-label"></label>
+                <input asp-for="MerkKendaraan" class="form-control" />
+                <span asp-validation-for="MerkKendaraan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TahunPembuatan" class="control-label"></label>
+                <input asp-for="TahunPembuatan" class="form-control" />
+                <span asp-validation-for="TahunPembuatan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kapasitas" class="control-label"></label>
+                <input asp-for="Kapasitas" class="form-control" />
+                <span asp-validation-for="Kapasitas" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Kapasitas" class="control-label"></label>
+                <input asp-for="Kapasitas" class="form-control" />
+                <span asp-validation-for="Kapasitas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Warna" class="control-label"></label>
+                <select asp-for="Warna" class="form-control">
+                    <option value="Merah">Merah</option>
+                    <option value="Hitam">Hitam</option>
+                    <option value="Biru">Biru</option>
+                    <option value="Abu-Abu">Abu-Abu</option>
+                </select>
+                <span asp-validation-for="Warna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BahanBakar" class="control-label"></label>
+                <input asp-for="BahanBakar" class="form-control" />
+                <span asp-validation-for="BahanBakar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" onclick="return confirm('apakah anda yakin untuk edit?')" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
